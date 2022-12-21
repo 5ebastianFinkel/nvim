@@ -59,7 +59,7 @@ return packer.startup(function(use)
 
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
-  use 'nvim-tree/nvim-web-devicons'
+  use('nvim-tree/nvim-web-devicons')
 
   -- commenting with gc
   use("numToStr/Comment.nvim")
@@ -67,14 +67,14 @@ return packer.startup(function(use)
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
     end
-})
+  })
   use {
-   'lewis6991/gitsigns.nvim',
-  -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
 
   use "nvim-lualine/lualine.nvim"
@@ -86,7 +86,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
--- managing & installing lsp servers, linters & formatters
+  -- managing & installing lsp servers, linters & formatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
@@ -105,18 +105,12 @@ return packer.startup(function(use)
       }
     end
   }
--- snippets
+  -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
 
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
   -- Treesitter
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  })
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

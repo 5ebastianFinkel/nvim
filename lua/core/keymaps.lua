@@ -41,6 +41,12 @@ keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", opts)
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts) -- move highlighted code one line up
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
+-- Moving between windows 
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+
 -- Resizing panes with arrow keys
 keymap("n", "<Left>", ":vertical resize +2CR>", opts)
 keymap("n", "<Right>", ":vertical resize -2<CR>", opts)
