@@ -62,6 +62,7 @@ return packer.startup(function(use)
   use('nvim-tree/nvim-web-devicons')
 
   -- commenting with gc
+  use("norcalli/nvim-colorizer.lua")
   use("numToStr/Comment.nvim")
   use({
     "kylechui/nvim-surround",

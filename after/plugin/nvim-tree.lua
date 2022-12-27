@@ -1,6 +1,6 @@
 -- import nvim-tree plugin safely
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
+local found, nvimtree = pcall(require, "nvim-tree")
+if not found then
   return
 end
 

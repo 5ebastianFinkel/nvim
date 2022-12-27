@@ -19,7 +19,7 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = "menu,menuone"
 vim.opt.pumheight = 10 -- shows max 10 items in the completion window
 
 cmp.setup {
@@ -34,7 +34,7 @@ cmp.setup {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-e>"] = cmp.mapping.abort(),
-    ["<tab>"] = cmp.mapping(
+    ["<CR>"] = cmp.mapping(
       cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
         select = true,
@@ -65,7 +65,7 @@ cmp.setup {
     },
 
     -- ["<tab>"] = false,
-    ["<tab>"] = cmp.config.disable,
+    -- ["<tab>"] = cmp.config.disable,
 
     -- ["<tab>"] = cmp.mapping {
     --   i = cmp.config.disable,
@@ -83,20 +83,20 @@ cmp.setup {
     -- If you want tab completion :'(
     --  First you have to just promise to read `:help ins-completion`.
     --
-    -- ["<Tab>"] = function(fallback)
-    --   if cmp.visible() then
-    --     cmp.select_next_item()
-    --   else
-    --     fallback()
-    --   end
-    -- end,
-    -- ["<S-Tab>"] = function(fallback)
-    --   if cmp.visible() then
-    --     cmp.select_prev_item()
-    --   else
-    --     fallback()
-    --   end
-    -- end,
+    ["<Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ["<S-Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
   },
 
   -- Youtube:
@@ -110,7 +110,6 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "nvim_lsp", keyword_length = 3 },
     { name = "luasnip" },
-  }, {
     { name = "path" },
     { name = "buffer", keyword_length = 3 },
   }),
