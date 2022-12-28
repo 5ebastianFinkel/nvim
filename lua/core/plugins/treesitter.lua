@@ -6,8 +6,10 @@ configs.setup {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
-
   },
+  -- indentation
   indent = { enable = true, disable = { "yaml" } },
+  -- autotag with (nvim-autotag)
+  autotag = { enable = true },
   auto_install = true,
 }

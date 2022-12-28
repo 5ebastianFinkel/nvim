@@ -63,6 +63,8 @@ return packer.startup(function(use)
 
   -- commenting with gc
   use("norcalli/nvim-colorizer.lua")
+  use("windwp/nvim-autopairs")
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
   use("numToStr/Comment.nvim")
   use({
     "kylechui/nvim-surround",
