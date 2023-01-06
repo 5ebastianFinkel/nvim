@@ -12,6 +12,10 @@ vim.g.maplocalleader = " "
 keymap("i", "jk", "<ESC>", opts)
 keymap("t", "jk", "<C-\\><C-n>", opts)
 
+-- Save fast with short cuts
+keymap("n", "<Leader>w", "<cmd>w <CR>", opts)
+keymap("n", "<Leader>wa", "<cmd>wa <CR>", opts)
+keymap("n", "<Leader>qq", "<cmd>q! <CR>", opts)
 -- Center screen when moving cursor or switching search results
 -- for better navigation 
 keymap("n", "<C-d>", "<C-d>zz", opts)
@@ -48,7 +52,7 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resizing panes with arrow keys
-keymap("n", "<Left>", ":vertical resize +2CR>", opts)
+keymap("n", "<Left>", ":vertical resize +2<CR>", opts)
 keymap("n", "<Right>", ":vertical resize -2<CR>", opts)
 keymap("n", "<Up>", ":resize -2<CR>", opts)
 keymap("n", "<Down>", ":resize +2<CR>", opts)

@@ -42,16 +42,16 @@ return packer.startup(function(use)
   -- Package Manager
   use "wbthomason/packer.nvim" -- Have packer manage itself
   -- Vim Training
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  }
+  -- use {
+  --   "folke/which-key.nvim",
+  --   config = function()
+  --     require("which-key").setup {
+  --       -- your configuration comes here
+  --       -- or leave it empty to use the default settings
+  --       -- refer to the configuration section below
+  --     }
+  --   end
+  -- }
   use "ThePrimeagen/vim-be-good"
   use 'folke/tokyonight.nvim'
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim

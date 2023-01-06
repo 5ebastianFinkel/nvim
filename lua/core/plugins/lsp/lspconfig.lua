@@ -62,10 +62,9 @@ lspconfig["cssls"].setup({
 })
 
 -- configure emmet language server
-lspconfig["emmet_ls"].setup({
+lspconfig["volar"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "html", "css", "sass", "scss", "less", "svelte", "vue" },
 })
 
 -- configure lua server (with special settings)

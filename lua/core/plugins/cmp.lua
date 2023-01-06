@@ -19,10 +19,13 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = "menu,menuone"
+vim.opt.completeopt = "menu,menuone,noinsert"
 vim.opt.pumheight = 10 -- shows max 10 items in the completion window
 
 cmp.setup {
+  completion ={
+    completeopt = 'menu,menuone,noinsert'
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -108,7 +111,7 @@ cmp.setup {
   --        (more?)
   sources = cmp.config.sources({
     { name = "nvim_lua" },
-    { name = "nvim_lsp", keyword_length = 3 },
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "path" },
     { name = "buffer", keyword_length = 3 },

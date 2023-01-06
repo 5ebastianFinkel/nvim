@@ -24,11 +24,11 @@ mason_lspconfig.setup({
   -- list of servers for mason to install
   ensure_installed = {
     "tsserver",
+    "vue-language-server",
     "html",
     "cssls",
     "sumneko_lua",
-    "emmet_ls",
   },
   -- auto-install configured servers (with lspconfig)
-  automatic_installation = true, -- not the same as ensure_installed
+  automatic_installation = false, -- not the same as ensure_installed
 })
