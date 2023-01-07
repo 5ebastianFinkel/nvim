@@ -60,6 +60,7 @@ return packer.startup(function(use)
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
   use('nvim-tree/nvim-web-devicons')
+  use('ThePrimeagen/harpoon')
 
   -- commenting with gc
   use("norcalli/nvim-colorizer.lua")
@@ -94,6 +95,7 @@ return packer.startup(function(use)
   use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
   -- configuring lsp servers
+  use "b0o/schemastore.nvim"
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis

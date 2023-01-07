@@ -24,7 +24,8 @@ mason_lspconfig.setup({
   -- list of servers for mason to install
   ensure_installed = {
     "tsserver",
-    "vue-language-server",
+    "volar",
+    "jsonls",
     "html",
     "cssls",
     "sumneko_lua",

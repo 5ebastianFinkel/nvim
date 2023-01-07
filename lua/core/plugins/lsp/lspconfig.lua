@@ -87,3 +87,19 @@ lspconfig["sumneko_lua"].setup({
     },
   },
 })
+-- configure json server with schemastore import
+lspconfig["jsonls"].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas {
+        select = {
+          '.eslintrc',
+          'package.json',
+        },
+      },
+      validate = { enable = true },
+    },
+  },
+}
