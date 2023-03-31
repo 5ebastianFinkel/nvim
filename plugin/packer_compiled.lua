@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/sfinkel/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/sfinkel/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/sfinkel/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -237,6 +242,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sfinkel/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-kitty"] = {
+    loaded = true,
+    path = "/Users/sfinkel/.local/share/nvim/site/pack/packer/start/vim-kitty",
+    url = "https://github.com/fladson/vim-kitty"
   }
 }
 

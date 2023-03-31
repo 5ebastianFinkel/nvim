@@ -63,6 +63,7 @@ keymap("i", "<Right>", "<nop>", opts)
 keymap("i", "<Up>", "<nop>", opts)
 keymap("i", "<Down>", "<nop>", opts)
 
+keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
 
 -----------------------
 --- Plugin Keybinds ---

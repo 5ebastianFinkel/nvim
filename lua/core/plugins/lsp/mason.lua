@@ -28,7 +28,7 @@ mason_lspconfig.setup({
     "jsonls",
     "html",
     "cssls",
-    "sumneko_lua",
+    "lua_ls",
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = false, -- not the same as ensure_installed

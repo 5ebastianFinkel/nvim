@@ -52,6 +52,9 @@ return packer.startup(function(use)
   --     }
   --   end
   -- }
+  -- kitty syntax highlighting
+  use "fladson/vim-kitty"
+  -- theming
   use "ThePrimeagen/vim-be-good"
   use 'folke/tokyonight.nvim'
   use "rebelot/kanagawa.nvim"
@@ -111,6 +114,7 @@ return packer.startup(function(use)
       }
     end
   }
+  use {"github/copilot.vim"}
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
 
